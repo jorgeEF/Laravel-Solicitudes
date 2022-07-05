@@ -31,7 +31,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/pedidos?status=all">Pedidos</a>
+                        <a class="nav-link" href="{{ route('pedidos') }}">Pedidos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('categories') }}">Categorías</a>

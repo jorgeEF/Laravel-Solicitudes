@@ -8,24 +8,18 @@
         @endcan
 
         <h2 align="center">Listado de Pedidos</h2>
-        <div class="d-flex justify-content-center">
-            <p align="center"><strong>Filtrar:</strong></p>
-            <div align="center"><a class="btn btn-primary btn-sm mx-1" href="/pedidos" role="button">Todos</a></div>
-            <div align="center"><a class="btn btn-warning btn-sm mx-1" href="?status=generado" role="button">Generados</a></div>
-            <div align="center"><a class="btn btn-success btn-sm mx-1" href="?status=con%20expediente" role="button">Con Expediente</a></div>
-            <div align="center"><a class="btn btn-danger btn-sm mx-1" href="?status=rechazado" role="button">Rechazados</a></div>
-
-            <div class="d-flex input-group-sm mb-3 mx-1">
-                <input type="text" name="btnSearch" id="btnSearch" class="form-control" placeholder="expediente...">
-                <a class="btn btn-outline-secondary" onClick="buscar()" role="button" type="submit">buscar</a>
+        <div class="d-flex justify-content-center mx-1">
+            <p><strong>Filtrar:</strong></p>
+            <div><a class="btn btn-primary btn-sm mx-1" href="/pedidos" role="button">Todos</a></div>
+            <div><a class="btn btn-warning btn-sm mx-1" href="?status=generado" role="button">Generados</a></div>
+            <div><a class="btn btn-success btn-sm mx-1" href="?status=con%20expediente" role="button">Con Expediente</a></div>
+            <div><a class="btn btn-danger btn-sm mx-1" href="?status=rechazado" role="button">Rechazados</a></div>
+            <div class="d-flex input-group-sm mb-3">
+                <form action="" method="GET">
+                    <input type="text" name="search" class="form-control form-control-sm" placeholder="Buscar expediente...">
+                    <button type="submit" class="btn btn-outline-secondary btn-sm">Buscar</button>
+                </form>
             </div>
-            <script>
-            function buscar(){
-                var searchInput = document.getElementById('btnSearch').text();
-                var url = "/pedidos?search=" + searchInput;
-                window.open(url);
-            }
-            </script>
         </div>
         <div>
             <table class="table table-sm table-light table-hover table-borderless">
