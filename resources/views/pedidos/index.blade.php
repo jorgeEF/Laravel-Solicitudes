@@ -14,12 +14,12 @@
             <div><a class="btn btn-warning btn-sm mx-1" href="?status=generado" role="button">Generados</a></div>
             <div><a class="btn btn-success btn-sm mx-1" href="?status=con%20expediente" role="button">Con Expediente</a></div>
             <div><a class="btn btn-danger btn-sm mx-1" href="?status=rechazado" role="button">Rechazados</a></div>
-            <div class="d-flex input-group-sm mb-3">
-                <form action="" method="GET">
-                    <input type="text" name="search" class="form-control form-control-sm" placeholder="Buscar expediente...">
-                    <button type="submit" class="btn btn-outline-secondary btn-sm">Buscar</button>
-                </form>
-            </div>
+            <form action="" method="GET">
+                <div class="input-group mb-3 mx-1">
+                    <input type="text" name="search" class="form-control form-control-sm" placeholder="Buscar expediente..." aria-label="Expediente" aria-describedby="button-addon2">
+                    <button class="btn btn-secondary btn-sm" type="submit" id="button-addon2">Buscar</button>
+                </div>
+            </form>
         </div>
         <div>
             <table class="table table-sm table-light table-hover table-borderless">
